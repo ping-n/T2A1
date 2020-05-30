@@ -11,6 +11,7 @@
 | 3   | [Discuss Rails common database: Pros and Cons](#question-2)             |
 | 4   | [Discuss Agile Project Management](#question-3)             |
 | 5   | [Standard Source Control Workflow](#question-4)             |
+| 6  | [Standard Testing Process](#question-5)             |
 
 ## Brief
 
@@ -127,7 +128,7 @@ Sprints refer to short cycle of development in which goals and specific objects 
 
 #### Step 4: Sprints Review
 
-Reviews enable the senior developer to manage their team to ensure that the development objectives are met for teh particular sprint and whether it is up to the expectation of the clients. Agile development process is all about continuous learning and iteration during the development to details what was successful during and what was unsuccessful so that mistake can be avoided in future sprints. 
+Reviews enable the senior developer to manage their team to ensure that the development objectives are met for the particular sprint and whether it is up to the expectation of the clients. Agile development process is all about continuous learning and iteration during the development to details what was successful during and what was unsuccessful so that mistake can be avoided in future sprints. 
 
 #### Step 5: Product release
 
@@ -169,3 +170,22 @@ Resources:
 - https://aws.amazon.com/devops/source-control/
 - https://homes.cs.washington.edu/~mernst/advice/version-control.html
 - https://www.insiso.co.uk/source-control-development-workflows/
+
+
+## Question 5: 
+Provide an overview and description of a standard software testing process (e.g. manual testing).
+
+---
+
+Software testing is the process to check whether the application actual results matches the expected results, it also ensure that the software is performing defect free and there are no unexpected results occurring in the numerous components of the application. Software involve performing checks to ensure the quality of the software and stressing out the performance of the software to see if the application can handle the expected workload. There are two approach to software testing which involve manual and automated testing. 
+
+Manual refer to tests that are perform by an actual person, the person would have to set the up application and perform tests by clicking or interacting with application to look for bugs and document any unexpected behavior that may occur during the testing process. Manual testing is expensive and time consuming as it involve hiring tester to set up and go through the application features one by one, manual testing can inaccurate due to human errors in typos or omitting steps in the test scripts.
+
+Automated testing refer to tests that perform by machine following test scripts prepares in advance by tester to check the functionality of the application to ensure that it matches the expected results. Although automated testing is more robust and reliable when compared to manual testing, the quality of the automated tests is heavily depended on the quality if the test scripts written by the tester. Automated testing however is the future of software development as it is key component in continuous integration and delivery which allows company to scale and add new features to teh application. 
+
+Software testing is the key in ensuring software quality is high, the typical testing process involve discovering and reporting bugs, eliminate the bugs, review the changes to ensure functionality remain the same and continue testing to ensure the results matches the expected results. The current trend of software development is to use test driven development to ensure features are meeting expectation before moving on to the next feature, this emphasis the agile methodology project management approach in software development.
+
+Resource: 
+- https://www.guru99.com/software-testing-introduction-importance.html
+- https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing
+- http://agiledata.org/essays/tdd.html
