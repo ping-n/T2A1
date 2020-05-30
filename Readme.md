@@ -140,6 +140,32 @@ Resources:
 - https://www.wrike.com/project-management-guide/faq/what-is-agile-methodology-in-project-management/
 
 ## Question 4: 
-Provide an overview and description of a standard source control workflow
+Provide an overview and description of a standard source control workflow.
 
 ---
+
+Source control (or version control) refer to practice of tracking and management of codes during development cycle, source control management allows developer to manages the history of the source code in software project and quickly resolve conflicts when merging contribution from multiple sources. Source control is a vital part of software development which is basic skill for developer who aims to work for in huge projects. Source code management allows to develop to track the progress of their source codes for changes, conflicts or to revert to an older version if there are major bugs. This allow developers to the flexibility to collaborate with other developers in team project to work on different features at once without breaking the application, it also help streamline the development process and provide a centralize hub where the source codes is stored.
+
+There are two general approach to a standard source control workflow
+
+#### Centralized Version Control
+
+<img src="./docs/centralize.png" width="40%">
+
+Centralized version control workflow refer to situation where each member of the get their own working copy of the source but all member will work from one central repository. Each member will git pull from the centralize repository, make changes and then git commit and push their changes to the repository. The other member will need to repeat the process if they want to update the code base.
+
+#### Distributed Version Control
+
+<img src="./docs/distributed.png" width="40%">
+
+Distributed version control is the more modern approach where each member will have their working clone of the main repository, as show in the diagram above each member will work and commit to their own repository and only have access to changes if they pull from the main repository. This version control approach allows to developers to work on the application without affecting the repository of other developers. This allow to choose to pull or push changes that they have finalize or review without affect the main repository.
+
+Overall the standard development process involve cloning the repository, making their a separate branch from the main repository, make changes to the source code and merge the code into the main branch for deployment.
+
+<img src="./docs/git-workflow.png" width="40%">
+
+
+Resources:
+- https://aws.amazon.com/devops/source-control/
+- https://homes.cs.washington.edu/~mernst/advice/version-control.html
+- https://www.insiso.co.uk/source-control-development-workflows/
