@@ -9,9 +9,10 @@
 | 1   | [Brief](#brief)                                                         |
 | 2   | [Describe the architecture of a typical Rails application](#question-1) |
 | 3   | [Discuss Rails common database: Pros and Cons](#question-2)             |
-| 4   | [Discuss Agile Project Management](#question-3)             |
-| 5   | [Standard Source Control Workflow](#question-4)             |
-| 6  | [Standard Testing Process](#question-5)             |
+| 4   | [Discuss Agile Project Management](#question-3)                         |
+| 5   | [Standard Source Control Workflow](#question-4)                         |
+| 6   | [Standard Testing Process](#question-5)                                 |
+| 7   | [Discuss and Analyse Information Security](#question-6)                 |
 
 ## Brief
 
@@ -189,3 +190,9 @@ Resource:
 - https://www.guru99.com/software-testing-introduction-importance.html
 - https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing
 - http://agiledata.org/essays/tdd.html
+
+## Question 6: 
+Discuss and analyse requirements related to information system security and how they relate to the project.
+
+---
+
