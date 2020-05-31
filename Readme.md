@@ -18,6 +18,9 @@
 | 10  | [Describe Structural Relational Database Model](#question-9)                 |
 | 11  | [Describe Integrity Aspects of the Relational Database Model](#question-10)  |
 | 12  | [Describe the Manipulate Aspects of Relational Database Model](#question-11) |
+| 13  | [Identify and Explain the Workings of TWO Sorting Algorithms](#question-12)  |
+| 14  | [Identify and Explain the Workings of TWO Search Algorithm](#question-13)    |
+| 15  | [Conduct Research on a Marketplace App](#question-14)                        |
 
 
 ## Brief
@@ -344,3 +347,309 @@ Resource:
 Describe the manipulative aspects of the relational database model. Your description should include information about the ways in which data is manipulated (added, removed, changed, and retrieved) in a relational database.
 
 ---
+
+In relational database model, the SQL database language is used to manipulate aspects of the data base, in a Rails application the SQL commands is performed by the Active Record to when the developer perform any CRUD action on a data object. There are four main command in SQL to manipulate, these commands are SELECT, INSERT, UPDATE and DELETE.
+
+**SELECT** allow developers to query data or retrieve data from database table, select can be use to query data from a specific column or all the column in the database table. 
+
+```sql
+-- basic syntax
+SELECT column_list FROM table-name
+
+--  selecting student first names from the student details table
+SELECT first_name FROM student_details;
+```
+
+**INSERT** allow developers add new data into the database table by inserting a new row of data. If a developer is adding value for all column in a database table then the column does not to be specify however the order of value matter to ensure the value is being stored in the correct column.
+
+```sql
+-- basic syntax
+INSERT INTO TABLE_NAME
+[ (col1, col2, col3,...colN)]
+VALUES (value1, value2, value3,...valueN);
+
+-- example SQL insert command
+INSERT INTO employee (id, name, dept, age, salary location) VALUES (105, 'Srinath', 'Aeronautics', 27, 33000);
+```
+
+**UPDATE** allow developers to modify the existing rows of value within database table. Developer must be careful in how they modify the value by identifying the correct rows otherwise if no row is specific then all value in the database table will be affected.
+
+```sql
+-- basic syntax
+UPDATE table_name
+SET column_name1 = value1,
+column_name2 = value2, ...
+[WHERE condition]
+
+-- example SQL update command
+
+-- specific row
+UPDATE employee
+SET location ='Mysore'
+WHERE id = 101;
+
+-- all employee is affected
+UPDATE employee
+SET salary = salary + (salary * 0.2);
+```
+
+**DELETE** allow developers to delete a row from the database table. Developer must carefully specify which row to delete with the WHERE statement otherwise all rows in the database table will be deleted. DELETE can tricky in relational database model due to the foreign therefore to delete a row with foreign, developer must first delete the associated object.
+
+```sql
+-- basic syntax
+DELETE FROM table_name [WHERE condition];
+
+-- example SQL update command
+
+-- specific row
+DELETE FROM employee WHERE id = 100;
+
+-- delete all rows
+DELETE FROM employee;
+```
+
+Resource: 
+- https://beginner-sql-tutorial.com/sql-commands.htm
+- https://guides.rubyonrails.org/active_record_querying.html
+
+## Question 12: 
+Identify and explain the workings of TWO sorting algorithms and discuss and compare their performance/efficiency (i.e. Big O)
+
+---
+
+
+## Question 13: 
+Identify and explain the workings of TWO search algorithms and discuss and compare their performance/efficiency (i.e. Big O)
+
+---
+
+## Question 14: 
+Conduct research into a marketplace website (app) and answer the following parts:
+
+---
+
+I have chosen to conduct a details analysis on the streaming platform Twitch which it not a standard two-sided marketplace. Information regarding can be found the [Wiki Page](https://en.wikipedia.org/wiki/Twitch_(service)).
+
+### A:
+List and describe the software used by the app.
+
+---
+
+<img src="./docs/twitch-stack.png" width="30%">
+<img src="./docs/twitch-stack2.png" width="30%">
+
+The stackshare images above indicate that twitch use range of different programming to build their application which will explain in detail below.
+
+Programming Language: Ruby, Go, C++, C 
+Programming framework: Ruby on Rails, Ember.js
+Database: PostgreSQL
+Data Analysis: Google Analytic, Frame Data
+Payment: Recurly
+Web Server: Nginx
+Security: Authy
+
+**Ruby**
+- Ruby is a general-purpose programming language first released in 1995 and it was created by Yukihiro Matsumoto in Japan
+- Ruby is a high-level, interpreted language
+
+**Go**
+- Go is statically typed and compiled language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson.
+- Go is recent language that first appear in 2009
+
+**C**
+- C is a general-purpose programming language designed by Dennis Ritchie which first appeared in 1972.
+
+**C++**
+- C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension to C programming language.
+
+Since Twitch use such a wide range, it is really difficult to determine which language they predominately use to create their web application. I would assume that twitch use a range of language because to allow to select the best language according to the task at hand, I think twitch mainly use Go for general purpose, Ruby through Rails framework to handle the back end. While using C/C++ to handle the videos encoding system they have for streaming, and lastly Ember.js which is a JavaScript framework for their web application. They have not specific any programming language for mobile application therefore it is hard to make a detail judgement. 
+
+### B:
+Describe the hardware used to host the app
+
+---
+
+The hardware aspects of Twitch.tv can be difficult to judge but since Twitch is a subsidy of Amazon, it can conclusive that twitch use a range of Amazon product to host their application. This is identified in the sharestack image above which show that twitch use Amazon EC2.
+
+Amazon EC2 provide a scalable option for application who wish to store or run their web application on the cloud. Amazon EC2 basically provide developer with a virtual computing environment to handle high level of traffic. It would wise for twitch make use of Amazon EC2 remote server to store their data securely as appose to investing a hardware server in a physical location which require a lot of resource to build and maintain. Plus being a subsidy of Amazon, it would be wise to make use of the huge resource that Amazon provide, as Amazon server would have the hardware capacity to host Twitch server and enable to be more scalable in the future.
+
+Resource:
+- https://www.businessinsider.com.au/amazon-buys-twitch-2014-8?r=US&IR=T
+- https://aws.amazon.com/ec2/
+
+### C:
+Describe the interaction of technologies within the app.
+
+---
+
+Twitch is a popular streaming platform that originated as a web-base application but have since expand to Apple marketplace and Google play store, which allow user to use twitch through a mobile application rather than through the mobile browser.
+
+User interaction differ if they interact with the application through mobile but the general user will interact with application through a web browser. The browser make HTTP requests to the Twitch application in this case would be through Ruby on Rails framework which uses a MVC framework. In a MVC framework the controller handle the http request from the browser which interact with the model, the model will retrieve the data and the controller render the view which show the data back to the user through the client browser.
+
+Twitch make use of different programming language to perform different task however they use only PostgreSQL as their main storage of the database, the data and web application is likely store on virtual computer and server through Amazon EC2. Twitch also use a range of different such Nginx which is web server to handle the high traffic demand as millions of users uses the application daily. They use Authy which is a two factor authentication solution as mean to protect their user account from being compromised by cyber threats.
+
+### D:
+Describe the way data is structured within the app.
+
+---
+
+The database of Twitch would likely be a relational database model where relationship is clearly defined within the database table. Data in Twitch server will need to be organize to optimise rows and column to ensure the smooth user interaction with the application as millions of requests will need to handle efficiently given the popularity of their platform. User can choose to watch stream without having sign in, this meant that twitch likely have a way to handle the session of guest user and also user who have logged in. The homepage of twitch is clutter with featured streams while also have stream categorized by games.
+
+Overall the data base of Twitch is a relational database with primary and foreign indicating the relational links between data table. They would require complex database system to store their data secure which explain why they use PostgreSQL as their main database system. PostgreSQL is a powerful database that can handle the complexity of the data table that Twitch need to maintain their web application.
+
+### E:
+Identify entities which must be tracked by the app.
+
+---
+
+Twitch database entities is highly therefore it really to clearly define their data table 
+
+User
+- username
+- password
+- two-factor authentication
+
+Profile
+- Display name
+- Bio
+- notification
+
+Channel
+- bio
+- schedule
+- status
+
+Video
+- name
+
+Category
+- name
+
+Subscription
+- start_at
+- Expire_at
+- Amazon prime
+
+
+Payment information
+- encrypted credit card number
+- encrypted credit card expiry
+- name
+
+Chatbox
+- text
+
+Chatbox_channel (Joint table)
+- user id
+- channel id
+
+### F:
+Identify the relationships and associations between the entities you have identified in part E
+
+---
+
+User
+- Has one profile
+- Has one channel
+- Has many payment information
+- Has one chatbox through Chatbox_Channel
+- Has many subscription
+
+Category
+- Has many channel
+
+Subscription
+- Belong to one user
+- Belong to one channel
+
+Channel
+- Belong to one category
+- Belong to one user
+- Has one chatbox though Chatbox_Channel
+- Has many video
+- Has many subscription
+
+Video
+- Has one channel
+
+Payment information
+- Belong to one user
+
+Chatbox
+- Belong to many users
+- Belong to one channel
+
+### G:
+Design a schema using an Entity Relationship Diagram (ERD) appropriate for the database of this website (assuming a relational database model)
+
+---
+
+<img src="./docs/twitch-ERD.png" width="70%">
+
+```sql
+Table users {
+  id int [pk, increment]
+  username string
+  email string
+  two_factor boolean
+  encrypted_password string
+  reset_password_token datetime
+  remember_created_at datetime
+}
+
+Table profile {
+  id int [pk, increment]
+  display_name varchar
+  bio text
+  notification boolean
+  user_id int [ref: < users.id]
+}
+
+Table channel {
+  id int [pk, increment]
+  bio string
+--   enum status for online or offline
+  status enum 
+  user_id int [ref: < users.id]
+  category_id int [ref: < category.id]
+}
+
+Table video {
+  id int [pk, increment]
+  name varchar
+  channel_id int [ref: < channel.id]
+}
+
+Table category {
+  id int [pk, increment]
+  name varchar
+}
+
+Table subscription {
+  id int [pk, increment]
+  start_at date
+  end_at date
+  prime boolean
+  channel_id int [ref: < channel.id]
+  user_id int [ref: < users.id]
+}
+
+Table payment_info {
+  id int [pk, increment]
+  encrypted_credit_card_number int
+  encrypted_credit_card_expiry date
+  name varchar
+  user_id int [ref: < users.id]
+}
+
+Table chatbox {
+  id int [pk, increment]
+  user_id int [ref: < users.id]
+}
+
+Table channel_chatbox {
+  id int [pk, increment]
+  chatbox_id int [ref: < chatbox.id]
+  channel_id int [ref: < channel.id]
+}
+```
