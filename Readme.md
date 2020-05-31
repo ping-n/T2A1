@@ -13,8 +13,9 @@
 | 5   | [Standard Source Control Workflow](#question-4)                         |
 | 6   | [Standard Testing Process](#question-5)                                 |
 | 7   | [Discuss and Analyse Information Security](#question-6)                 |
-| 8   | [Discuss Common Data Protection Methods](#question-7)                 |
-| 9   | [Legal Obligations](#question-8)                 |
+| 8   | [Discuss Common Data Protection Methods](#question-7)                   |
+| 9   | [Legal Obligations](#question-8)                                        |
+| 9   | [Describe Structural Relational Database Model](#question-9)            |
 
 ## Brief
 
@@ -260,5 +261,24 @@ Resource:
 
 ## Question 8: 
 what your legal obligations are in relation to handling user data and how they can be met for the project.
+
+---
+
+There is a legal requirement for company to handle user information in safe and secure manner under Australia Privacy Act 1988 (Privacy Act), company must dispose customer's information when they are no longer require which include shredding the data completely or storing the data in a secure storage. 
+
+For this project, the company should include a privacy policy pages that document the policies in what type of information will collected from the user, how and why these information is needed, how long the information is retain by the company and what steps the customer need to take if the have any questions or concern regarding the information collected. The OAIC have listed guideline on how a company should prepare their privacy policy to ensure they meet the legal requirement from the government in handling user personal information. [OAIC Privacy Policy guideline](https://www.oaic.gov.au/privacy/guidance-and-advice/guide-to-developing-an-app-privacy-policy/).
+
+The first step in starting the Rails project is to identify what type of data the application will need from the user, determine if the data is personal data (Name, Sex, Address etc ) or data relating to other field such as financial or health related. The company must then draft a privacy policy which will details the steps they will take when handling the data collected from the user, the policy should include how the data will be stored and there are sufficient plan in place to protect the data such as encryption, access control and back up system.
+
+Company have a solid plan of action in place to details the steps that are taken in case of a data breach, by having sound privacy policy in place employees are able to efficiently. It is an legal obligation of company to protect user data whether the application is big or small, developer must alway follow protocols set by ACMA and ensure there are sufficient policies in place to protect sensitive data when handling user's data.
+
+Resource:
+- https://www.business.gov.au/Risk-management/Cyber-security/How-to-protect-your-customers-information
+- https://iclg.com/practice-areas/data-protection-laws-and-regulations/australia
+- https://www.oaic.gov.au/about-us/our-corporate-information/key-documents/privacy-policy/
+- https://www.oaic.gov.au/privacy/guidance-and-advice/guide-to-developing-an-app-privacy-policy/
+
+## Question 9: 
+Describe the structural aspects of the relational database model. Your description should include information about the structure in which data is stored and how relations are represented in that structure.
 
 ---
