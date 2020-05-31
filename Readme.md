@@ -196,3 +196,6 @@ Discuss and analyse requirements related to information system security and how 
 
 ---
 
+Business have a responsibility to protect the information they receive from customer as they can become a target from malicious cyber attack that aim to steal key information about the business or customer personal information. Information security come with three keys components which often refer to as teh information security triad, the three key components are confidentiality, integrity and availability.
+
+<img src="./docs/Security-Triad.png" width="20%">
