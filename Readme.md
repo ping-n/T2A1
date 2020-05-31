@@ -13,6 +13,8 @@
 | 5   | [Standard Source Control Workflow](#question-4)                         |
 | 6   | [Standard Testing Process](#question-5)                                 |
 | 7   | [Discuss and Analyse Information Security](#question-6)                 |
+| 8   | [Discuss Common Data Protection Methods](#question-7)                 |
+| 9   | [Legal Obligations](#question-8)                 |
 
 ## Brief
 
@@ -215,8 +217,8 @@ The last part of the information security triad refer to Availability which mean
 #### Information security tools:
 
 Access Control:
--  Authentication: login system
--  Authorization: restrictions in place to control user access 
+-  Authentication: login system - using devise gem in rails
+-  Authorization: restrictions in place to control user access - using a gem like rails_admin or cancancan
 -  Password Security: Making employee change password frequently, having complex password and training them to not give away password
 Data Protection:
 - Encryption: Data encryption in place to protect sensitive information through encoding the data upon transmission or storage 
@@ -233,6 +235,30 @@ Resource:
 - https://www.techopedia.com/definition/24840/information-systems-security-infosec
 
 ## Question 7: 
-Discuss and analyse requirements related to information system security and how they relate to the project.
+Discuss common methods of protecting information and data and how you would apply them to the project.
+
+---
+
+There many way to protect the data and information in a Rails project, the best way to start to research the best practice of other Rails developers and follow what is best for the project. Rails also include many security helper by default to help developer ensure that they are protecting valuable data from malicious cyber attack such have having strong params in the controller, validations in the model and sanitizer for html and css input to protect from SQL attack.
+
+**HTTPS** is now a common practice for developer to include in their web application to protect sensitive information, if an application still use HTTP then attacker easily identify the password of the user as it is shown in clear text. HTTPS is easily enforced in Rails application though the production.rb in the config directory by enabling the following.
+
+```ruby
+config.force_ssl = true
+```
+
+**Session hijacking** is a common threat in many modern web application as it allow the attacker to steal the session ID from a user and login to the web application in that user's name to gather or steal personal information such as credit details or personal address. One of the best practice when working on a Rails project to install gem such Devise which provide the industry best practice for user authentication into the application as oppose to rolling your own version of authentication when starting out. Devise authentication gem come with session management which create session when a user sign in and destroy the session when they log out. This protect the application from potential session hijacking from cyber attacker, Devise also come with a solid documentations for developer to implement features or maintain their application.
+
+**Cross Site Request Forgery (CSRF)** is also common among cyber attacks, Rails have built-in protection in their form helper which add an authenticity token on forms which only allow user to make a POST request on form if they have the correct token. 
+
+Developer should a checklist to go through which indicating a clear method on how they will protect and maintain the information security of their web application.
+
+Resource:
+- https://guides.rubyonrails.org/security.html
+- https://github.com/heartcombo/devise
+- https://blog.engineyard.com/ruby-on-rails-security-checklist
+
+## Question 8: 
+what your legal obligations are in relation to handling user data and how they can be met for the project.
 
 ---
