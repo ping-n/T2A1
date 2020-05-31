@@ -4,18 +4,20 @@
 ## Table of Content
 ---
 
-| #   | Content                                                                 |
-| --- | ----------------------------------------------------------------------- |
-| 1   | [Brief](#brief)                                                         |
-| 2   | [Describe the architecture of a typical Rails application](#question-1) |
-| 3   | [Discuss Rails common database: Pros and Cons](#question-2)             |
-| 4   | [Discuss Agile Project Management](#question-3)                         |
-| 5   | [Standard Source Control Workflow](#question-4)                         |
-| 6   | [Standard Testing Process](#question-5)                                 |
-| 7   | [Discuss and Analyse Information Security](#question-6)                 |
-| 8   | [Discuss Common Data Protection Methods](#question-7)                   |
-| 9   | [Legal Obligations](#question-8)                                        |
-| 9   | [Describe Structural Relational Database Model](#question-9)            |
+| #   | Content                                                                     |
+| --- | --------------------------------------------------------------------------- |
+| 1   | [Brief](#brief)                                                             |
+| 2   | [Describe the architecture of a typical Rails application](#question-1)     |
+| 3   | [Discuss Rails common database: Pros and Cons](#question-2)                 |
+| 4   | [Discuss Agile Project Management](#question-3)                             |
+| 5   | [Standard Source Control Workflow](#question-4)                             |
+| 6   | [Standard Testing Process](#question-5)                                     |
+| 7   | [Discuss and Analyse Information Security](#question-6)                     |
+| 8   | [Discuss Common Data Protection Methods](#question-7)                       |
+| 9   | [Legal Obligations](#question-8)                                            |
+| 10  | [Describe Structural Relational Database Model](#question-9)                |
+| 11  | [Describe Integrity Aspects of the Relational Database Model](#question-10) |
+
 
 ## Brief
 
@@ -280,5 +282,41 @@ Resource:
 
 ## Question 9: 
 Describe the structural aspects of the relational database model. Your description should include information about the structure in which data is stored and how relations are represented in that structure.
+
+---
+
+Relational database model refer to a collection of information stored with predefined relationship which allow developer to easily access data. Relation database model have data structure that includes data types, index and views. The data tables is used to store information relating to the objects, with each row hold a unique refer to as keys and each column contains attributes of the data object. Each record will primary key which is unique to the table and foreign keys to represent relationship.
+
+```ruby
+# The table represent listing object create in a Rails application
+# Rails automatically assign primary key column to the table
+  create_table "listings", force: :cascade do |t|
+    t.string "name" # This is a column in the data table that represent an attribute of the object
+    t.string "brand"
+    t.decimal "price"
+    t.integer "condition"
+    t.boolean "sold", default: false # This represent the different datatypes can be store in a database table, in this case the data is store as boolean with default value of false
+    t.bigint "user_id", null: false # This column represent the relational database model indicating that listing belong to a user through users id foreign key
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.index ["category_id"], name: "index_listings_on_category_id"
+    t.index ["user_id"], name: "index_listings_on_user_id" # This indicate the relationship of listing to the user object
+  end
+```
+
+There are a few type of relational that a data can be represented on in a relation database model.
+- One to one relation: User can have only one profile and profile belong to a single user
+- One to many relation: User can have many listings while a listing belong to a single user
+- Many to many relation: Shopping cart can have many listings and listing can belong to many shopping carts
+  - many to many relation is often represented through a joint table such a CartsListings Table within the database which only hold foreign keys to represent the relation of the objects
+  
+Resource:
+- https://searchdatamanagement.techtarget.com/definition/relational-database
+- https://www.lifewire.com/database-relationships-p2-1019758
+
+## Question 9: 
+Describe the integrity aspects of the relational database model. Your description should include information about the types of data integrity and how they can be enforced in a relational database.
 
 ---
