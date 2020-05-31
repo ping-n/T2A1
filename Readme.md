@@ -4,19 +4,20 @@
 ## Table of Content
 ---
 
-| #   | Content                                                                     |
-| --- | --------------------------------------------------------------------------- |
-| 1   | [Brief](#brief)                                                             |
-| 2   | [Describe the architecture of a typical Rails application](#question-1)     |
-| 3   | [Discuss Rails common database: Pros and Cons](#question-2)                 |
-| 4   | [Discuss Agile Project Management](#question-3)                             |
-| 5   | [Standard Source Control Workflow](#question-4)                             |
-| 6   | [Standard Testing Process](#question-5)                                     |
-| 7   | [Discuss and Analyse Information Security](#question-6)                     |
-| 8   | [Discuss Common Data Protection Methods](#question-7)                       |
-| 9   | [Legal Obligations](#question-8)                                            |
-| 10  | [Describe Structural Relational Database Model](#question-9)                |
-| 11  | [Describe Integrity Aspects of the Relational Database Model](#question-10) |
+| #   | Content                                                                      |
+| --- | ---------------------------------------------------------------------------- |
+| 1   | [Brief](#brief)                                                              |
+| 2   | [Describe the architecture of a typical Rails application](#question-1)      |
+| 3   | [Discuss Rails common database: Pros and Cons](#question-2)                  |
+| 4   | [Discuss Agile Project Management](#question-3)                              |
+| 5   | [Standard Source Control Workflow](#question-4)                              |
+| 6   | [Standard Testing Process](#question-5)                                      |
+| 7   | [Discuss and Analyse Information Security](#question-6)                      |
+| 8   | [Discuss Common Data Protection Methods](#question-7)                        |
+| 9   | [Legal Obligations](#question-8)                                             |
+| 10  | [Describe Structural Relational Database Model](#question-9)                 |
+| 11  | [Describe Integrity Aspects of the Relational Database Model](#question-10)  |
+| 12  | [Describe the Manipulate Aspects of Relational Database Model](#question-11) |
 
 
 ## Brief
@@ -316,7 +317,30 @@ Resource:
 - https://searchdatamanagement.techtarget.com/definition/relational-database
 - https://www.lifewire.com/database-relationships-p2-1019758
 
-## Question 9: 
+## Question 10: 
 Describe the integrity aspects of the relational database model. Your description should include information about the types of data integrity and how they can be enforced in a relational database.
+
+---
+
+Data integrity is set of practical principles that defined how data is store within a database and how relational data is represented. Data integrity can be define as the overall accuracy, completeness, consistency of data and the safety of the data in regard to regulatory compliance. There are two types of data integrity, physical and logical integrity which are collection of processes and methods that enforce data integrity. There are three cores constraints that make up the management of data integrity: Entity, Referential and Domain integrity.
+
+#### Entity Integrity
+
+Entity integrity refer to the creation of primary or unique value that identify each piece of data, primary key ensure that every data being input is represented and there are no duplication of data. This is main feature in relational database model as the primary key is needed to link data between different database table. The main rule for entity integrity is that every table should have an incremental primary key which represent each unique data and that it cannot be null.
+
+#### Referential Integrity
+
+Referential integrity dictate the series of steps that define how the data is being stored and used in a uniform manner. Referential integrity is often refer the foreign key of a relational database model which have two states, the first state is that foreign key is refer to as the primary key of another table to indicate the relational link and the second state it can be a null value but the null value would indicate that there are no relational link or the relationship is unknown. Referential integrity help developers establish relationship between data table, making data accurate, eliminate duplicate and disallow any data that doesn't belong in the table.
+
+#### Domain Integrity
+
+Domain integrity is the constraint that govern the collection of processes to maintain accurate data being store in the column of a data table. Domain refer to the set of value that a column can contain, it ensure that data being store is of relevant datatype and limit the amount of data entered. For instance when a user input a username, the developer can set constraint on the minimum and maximum character allow and whether the user can include integer in their input. 
+
+Resource:
+- https://www.techopedia.com/definition/811/data-integrity-databases
+- https://www.talend.com/resources/what-is-data-integrity/
+
+## Question 11: 
+Describe the manipulative aspects of the relational database model. Your description should include information about the ways in which data is manipulated (added, removed, changed, and retrieved) in a relational database.
 
 ---
