@@ -182,7 +182,7 @@ Software testing is the process to check whether the application actual results 
 
 Manual refer to tests that are perform by an actual person, the person would have to set the up application and perform tests by clicking or interacting with application to look for bugs and document any unexpected behavior that may occur during the testing process. Manual testing is expensive and time consuming as it involve hiring tester to set up and go through the application features one by one, manual testing can inaccurate due to human errors in typos or omitting steps in the test scripts.
 
-Automated testing refer to tests that perform by machine following test scripts prepares in advance by tester to check the functionality of the application to ensure that it matches the expected results. Although automated testing is more robust and reliable when compared to manual testing, the quality of the automated tests is heavily depended on the quality if the test scripts written by the tester. Automated testing however is the future of software development as it is key component in continuous integration and delivery which allows company to scale and add new features to teh application. 
+Automated testing refer to tests that perform by machine following test scripts prepares in advance by tester to check the functionality of the application to ensure that it matches the expected results. Although automated testing is more robust and reliable when compared to manual testing, the quality of the automated tests is heavily depended on the quality if the test scripts written by the tester. Automated testing however is the future of software development as it is key component in continuous integration and delivery which allows company to scale and add new features to the application. 
 
 Software testing is the key in ensuring software quality is high, the typical testing process involve discovering and reporting bugs, eliminate the bugs, review the changes to ensure functionality remain the same and continue testing to ensure the results matches the expected results. The current trend of software development is to use test driven development to ensure features are meeting expectation before moving on to the next feature, this emphasis the agile methodology project management approach in software development.
 
@@ -196,6 +196,43 @@ Discuss and analyse requirements related to information system security and how 
 
 ---
 
-Business have a responsibility to protect the information they receive from customer as they can become a target from malicious cyber attack that aim to steal key information about the business or customer personal information. Information security come with three keys components which often refer to as teh information security triad, the three key components are confidentiality, integrity and availability.
+Business have a responsibility to protect the information they receive from customer as they can become a target from malicious cyber attack that aim to steal key information about the business or customer personal information. Information security come with three keys components which often refer to as the information security triad, the three key components are confidentiality, integrity and availability.
 
 <img src="./docs/Security-Triad.png" width="20%">
+
+#### Confidentiality
+
+Confidentiality can also be refer to as Authorization of data which protect the information by restricting access and only showing data relevant to the user. The essence of confidentiality is to protect the private data of user such as their personal information, only allowing other to see if the original have agree to display the data. An example of this would be in a university course, all student have access to information regarding class however student should only be able to see their own grades. 
+
+#### Integrity
+
+Integrity refer to the legitimacy of data represented in the database, the data that is accessed by user should represent what is intended and that the data have not been alter in way by a third party. An example would be the final grades marked by a teacher, if someone altered the grade before it is release then the integrity of the grade is compromised.
+
+#### Availability
+
+The last part of the information security triad refer to Availability which meant that authorized user should be able to access and modify information in an appropriate timeframe. The company is responsible for provide method to for anyone who wish to make changes to their own personal information, such as having a server running 24/7 so that user can access and alter their information at anytime they wish to do so.
+
+#### Information security tools:
+
+Access Control:
+-  Authentication: login system
+-  Authorization: restrictions in place to control user access 
+-  Password Security: Making employee change password frequently, having complex password and training them to not give away password
+Data Protection:
+- Encryption: Data encryption in place to protect sensitive information through encoding the data upon transmission or storage 
+- Security Key: Having public key and private key to ensure that only authorized personnel have access to information relevant to their task and no more
+- Back up system: Company must ensure that there are backup server in place to store and maintain the database, having an off-site server or multiples server protect the data from unforeseeable event such as a fire or earthquake.
+Network Security:
+- Firewall: Company must have a good firewall in place to act as barrier in filtering on-going traffic from and out of the company, this allow unknown packets to be intercept before it penetrate and compromise the company server.
+- Virtual Private Network: VPN is a common practice for company to protect from out threat, VPN allow company activity to be invisible to the outside world as it encrypt and mask the IP of the company. 
+
+These are some of information security tools a company can use to protect from malicious cyber attack, it is ultimately up to the company to decide how they wish to protect their database by having a well documented information security policies in place.
+
+Resource:
+- https://bus206.pressbooks.com/chapter/chapter-6-information-systems-security/
+- https://www.techopedia.com/definition/24840/information-systems-security-infosec
+
+## Question 7: 
+Discuss and analyse requirements related to information system security and how they relate to the project.
+
+---
