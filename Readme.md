@@ -417,11 +417,80 @@ Identify and explain the workings of TWO sorting algorithms and discuss and comp
 
 ---
 
+#### Quick Sort
+---
+
+Quick sort is a efficient sorting algorithm developed by Tony Hoare in 1959. Quick sort is still commonly use today in algorithm for sorting, if quick sort is well implemented it is will outperform merge sort or heapsort by two to three times. Quick sort is refer to as divide and conquer algorithm, it work by selecting a pivot element from an array and divide it into two sub-array according to whether it is less or greater than the pivot element. The sub-array will also be sorted recursively which require additional memory to run as it is done in-place. Quick sort will end once the algorithm goes through all element of the array where we are left with a final array that is sorted.
+
+The following animation illustrate quick sort algorithm in action:
+
+<img src="./docs/quick_sort_partition_animation.gif" width="50%">
+
+The following illustrate quick sort algorithm taken from the wikipedia page.
+
+<img src="./docs/Quicksort-diagram.png" width="50%">
+
+#### Merge Sort
+---
+
+Merge sort is similar to quick sort as it is also a divide and conquer sorting algorithm. Merge sort divide the array of inputs into two halves, merge sort is called upon the two halves where the algorithm is performed and then rejoin the two halves to into a sorted array.
+
+The following illustrate merge sort algorithm detailing order taken
+
+<img src="./docs/Merge-Sort-Tutorial.png" width="50%">
+
+#### Merge Sort Vs Quick Sort
+---
+
+- Merge sort on average base is faster than quick sort as merge sort perform less comparison than quick sort in both worst case and on average. 
+- Quick sort require less memory to run when compared to merge sort. This make quick sort much more prefer when sorting in a real world setting as it take less memory thus increase overall performance.
+- The worst case complexity of quick sort is O(n2) whereas merge sort worst case is O(n log n).
+- Merge is much more efficient when working with larger array size or dataset, whereas quick sort will quicker when dealing with smaller array or dataset. 
+
+Resource:
+- https://en.wikipedia.org/wiki/Quicksort
+- https://www.tutorialspoint.com/data_structures_algorithms/quick_sort_algorithm.htm
+- https://www.geeksforgeeks.org/merge-sort/
+- https://en.wikipedia.org/wiki/Merge_sort
+- https://www.geeksforgeeks.org/quick-sort-vs-merge-sort/
 
 ## Question 13: 
 Identify and explain the workings of TWO search algorithms and discuss and compare their performance/efficiency (i.e. Big O)
 
 ---
+
+#### Linear Search
+---
+
+Linear search move through the dataset sequentially until it find a match or once the whole data set have been checked. A linear search is the primitive form search algorithm which have become update with other form of search performing significantly faster. The linear will go through each element of the array or list until the match is found which make it really inefficient when dealing large data set however if the dataset is smaller then linear can be practical choice. Linear search has the runtime complexity of O(n).
+
+<img src="./docs/Linear-Search.png" width="50%">
+
+#### Binary Search
+---
+
+Binary search is another form of search algorithm with a runtime complexity of O(log n). Binary search is use to find element within a sorted array, it start by selecting the midpoint of the array and make comparison on the halves to check which half is greater of equal to the midpoint. The half that the value cannot exist will be discarded and the binary search will repeat the steps until the value is found. This is significantly faster than linear search as the binary does not need to goes all element of the array.
+
+<img src="./docs/Binary-Search.png" width="50%">
+
+#### Binary Search Vs Linear Search
+
+- Linear search iterate over the dataset until the result matched whereas Binary search cut down the search by half as soon as the middle element is located.
+- Linear search work without a sorted dataset whereas Binary search require the dataset to be sorted beforehand in order to work.
+- Linear search access the data is sequentially whereas Binary search is more random
+- Linear search will continue to search until the element found no matter how big the dataset is whereas Binary search will efficiently seek the middle element and check if the value is less or greater than the mid point. This step occur until the value is found.
+
+Linear Search to find the element “J” in a given sorted list from A-X
+
+<img src="./docs/Linear.png" width="50%">
+
+Binary Search to find the element “J” in a given sorted list from A-X
+
+<img src="./docs/binary-3.png" width="50%">
+
+Resources:
+- https://www.geeksforgeeks.org/linear-search/
+- https://www.geeksforgeeks.org/binary-search/
 
 ## Question 14: 
 Conduct research into a marketplace website (app) and answer the following parts:
@@ -435,8 +504,8 @@ List and describe the software used by the app.
 
 ---
 
-<img src="./docs/twitch-stack.png" width="30%">
-<img src="./docs/twitch-stack2.png" width="30%">
+<img src="./docs/twitch-stack.png" width="50%">
+<img src="./docs/twitch-stack2.png" width="50%">
 
 The stackshare images above indicate that twitch use range of different programming to build their application which will explain in detail below.
 
